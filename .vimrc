@@ -19,6 +19,7 @@ Plug 'mhinz/vim-startify'
 Plug 'tomasiser/vim-code-dark'
 Plug 'uiiaoo/java-syntax.vim'
 Plug 'bfrg/vim-cpp-modern'
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
