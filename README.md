@@ -27,7 +27,10 @@ sudo mv /usr/share/zsh/manjaro-zsh-config /usr/share/zsh/manjaro-zsh-config_old
 <br>
 sudo ln -s ./manjaro-zsh-config /usr/share/zsh/manjaro-zsh-config   
 <br>
-
+sudo mv /usr/share/zsh/p10k.zsh /usr/share/zsh/p10k.zsh_old
+<br>
+sudo ln -s ./p10k.zsh /usr/share/zsh/p10k.zsh
+<br>
 
 cd ~/.vim/plugged/YouCompleteMe
 
