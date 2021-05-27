@@ -64,6 +64,7 @@ alias df='df -h'                                                # Human-readable
 alias free='free -m'                                            # Show sizes in MB
 alias gitu='git add . && git commit && git push'
 alias spotify-tui='spt'
+alias history='history 1'
 
 # Theming section  
 autoload -U compinit colors zcalc
