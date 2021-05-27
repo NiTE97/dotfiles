@@ -65,6 +65,9 @@ alias free='free -m'                                            # Show sizes in 
 alias gitu='git add . && git commit && git push'
 alias spotify-tui='spt'
 alias history='history 1'
+alias ll='ls -l --color=always'
+alias la='ls -la --color=always'
+alias ls='ls --color=always'
 
 # Theming section  
 autoload -U compinit colors zcalc
