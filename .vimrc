@@ -20,6 +20,7 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'uiiaoo/java-syntax.vim'
 Plug 'bfrg/vim-cpp-modern'
 Plug 'dense-analysis/ale'
+Plug 'frazrepo/vim-rainbow'
 
 call plug#end()
 
@@ -37,7 +38,8 @@ map q :quit<CR>
 map <C-q> :qa<CR>
 map <C-s> :write<CR>
 map <F5> :NERDTreeToggle<CR>
-map <F6> :vert terminal<CR>
+
+let g:rainbow_active = 1
 
 " YOUCOMPLETEME
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
