@@ -7,10 +7,10 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 cd dotfiles
 mv ~/.zshrc ~/.zshrc_old
-ln .zshrc ~/.zshrc
+ln -s .zshrc ~/.zshrc
 mv ~/.vimrc ~/.vimrc_old
-ln .vimrc ~/.vimrc
-ln .ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
+ln -s .vimrc ~/.vimrc
+ln -s .ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
 
 cd ~/.vim/plugged/YouCompleteMe
 python3 install.py --all
