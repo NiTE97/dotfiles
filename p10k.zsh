@@ -421,7 +421,7 @@
     # in the repository config. The number of staged and untracked files may also be unknown
     # in this case.
     (( VCS_STATUS_HAS_UNSTAGED == -1 )) && res+=" ${modified}─"
-
+	res+="    "
     typeset -g my_git_format=$res
   }
   functions -M my_git_formatter 2>/dev/null
