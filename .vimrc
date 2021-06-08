@@ -28,7 +28,7 @@ colorscheme dracula
 
 hi! MatchParen cterm=NONE,bold gui=NONE,bold guibg=#87c095 guifg=NONE
 
-set nu!
+set relativenumber
 set mouse=a
 set title
 set cursorline
