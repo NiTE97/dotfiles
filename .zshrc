@@ -12,4 +12,4 @@ fi
 
 #neofetch
 
-figlet NiTE97 | lolcat
+figlet NiTE97 | lolcat --seed=100

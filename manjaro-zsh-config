@@ -57,7 +57,7 @@ bindkey -s '^[[15~' 'ranger\n'
 #bindkey '^n' clearfetch
 
 # ClearFiglet
-function clearfiglet() { echo "clear && figlet NiTE97 | lolcat"; clear; figlet NiTE97 | lolcat; zle reset-prompt; zle redisplay }
+function clearfiglet() { echo "clear && figlet NiTE97 | lolcat"; clear; figlet NiTE97 | lolcat --seed=100; zle reset-prompt; zle redisplay }
 zle -N clearfiglet
 bindkey '^n' clearfiglet
 
