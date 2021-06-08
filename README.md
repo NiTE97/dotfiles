@@ -31,6 +31,8 @@ sudo mv /usr/share/zsh/p10k.zsh /usr/share/zsh/p10k.zsh_old
 <br>
 sudo ln ./p10k.zsh /usr/share/zsh/p10k.zsh
 <br>
+sudo ln ./styli.sh /usr/bin/styli.sh
+
 
 cd ~/.vim/plugged/YouCompleteMe
 

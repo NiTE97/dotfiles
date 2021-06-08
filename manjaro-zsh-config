@@ -45,6 +45,12 @@ bindkey '^[[D'  backward-char                                   # Left key
 bindkey '^[[5~' history-beginning-search-backward               # Page up key
 bindkey '^[[6~' history-beginning-search-forward                # Page down key
 
+#Styli.sh
+bindkey -s '^[[19~' 'styli.sh -k -s summer; clear\n'
+
+#Ranger
+bindkey -s '^[[15~' 'ranger\n'
+
 # Clearfetch
 function clearfetch() { echo "clear && neofetch"; clear; neofetch; zle reset-prompt; zle redisplay}
 zle -N clearfetch
