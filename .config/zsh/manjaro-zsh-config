@@ -46,7 +46,10 @@ bindkey '^[[5~' history-beginning-search-backward               # Page up key
 bindkey '^[[6~' history-beginning-search-forward                # Page down key
 
 #Styli.sh
-bindkey -s '^[[19~' 'styli.sh -k -s summer; clear\n'
+#Fuer PC
+bindkey -s '^[[19~' 'styli.sh -n -m 3 -s abstract; clear\n'
+#Fuer Laptop
+#bindkey -s '^[[19~' 'styli.sh -n -s abstract; clear\n'
 
 #Ranger
 bindkey -s '^[[15~' 'ranger\n'
