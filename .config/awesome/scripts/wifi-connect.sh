@@ -1,5 +1,4 @@
 #!/bin/bash
-#sleep 10;
 internet_connection=false;
 connection_string='inet 192'
 while [ "$internet_connection" = false ];
