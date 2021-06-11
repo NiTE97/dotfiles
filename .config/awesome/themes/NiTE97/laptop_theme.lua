@@ -11,7 +11,7 @@ local math, string, os = math, string, os
 local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 local theme                                     = {}
-theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/NiTE97"
+theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow"
 --theme.wallpaper                                 = theme.dir .. "/wally.jpg"
 theme.font                                      = "Noto Sans Regular 11"
 theme.taglist_font                              = "Noto Sans Regular 15"
@@ -33,7 +33,7 @@ theme.titlebar_bg_normal                        = "#3F3F3F"
 theme.titlebar_bg_focus                         = theme.bg_focus
 theme.titlebar_bg_normal                        = theme.bg_normal
 theme.titlebar_fg_focus                         = theme.fg_focus
-theme.menu_height                               = 20 
+theme.menu_height                               = 40
 theme.menu_width                                = 420
 theme.menu_submenu_icon                         = theme.dir .. "/icons/submenu.png"
 theme.awesome_icon                              = theme.dir .. "/icons/awesome.png"
@@ -367,7 +367,7 @@ function theme.at_screen_connect(s)
     --s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons)
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = 22, bg = theme.bg_normal, fg = theme.fg_normal })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 44, bg = theme.bg_normal, fg = theme.fg_normal })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
