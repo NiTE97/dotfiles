@@ -46,14 +46,13 @@ bindkey '^[[5~' history-beginning-search-backward               # Page up key
 bindkey '^[[6~' history-beginning-search-forward                # Page down key
 
 #Styli.sh
-#Fuer PC
 bindkey -s '^[[19~' 'styli.sh -n -m 3 -s abstract; clear\n'
-#Fuer Laptop
-#bindkey -s '^[[19~' 'styli.sh -n -s abstract; clear\n'
 
 #Ranger
-bindkey -s '^[[15~' 'ranger\n'
+#bindkey -s '^[[15~' 'ranger\n'
 
+#Vifm
+bindkey -s '^[[15~' 'vifm\n'
 ## Clearfetch
 #function clearfetch() { echo "clear && neofetch"; clear; neofetch; zle reset-prompt; zle redisplay}
 #zle -N clearfetch
@@ -82,6 +81,7 @@ alias history='history 1'
 alias ll='ls -l --color=always'
 alias la='ls -la --color=always'
 alias ls='ls --color=always'
+alias vifm='vifm ~'
 
 # Theming section  
 autoload -U compinit colors zcalc
