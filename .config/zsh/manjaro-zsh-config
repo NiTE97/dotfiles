@@ -81,7 +81,7 @@ alias history='history 1'
 alias ll='ls -l --color=always'
 alias la='ls -la --color=always'
 alias ls='ls --color=always'
-alias vifm='vifm ~'
+alias vifm='vifm .'
 
 # Theming section  
 autoload -U compinit colors zcalc
