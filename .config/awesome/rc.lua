@@ -217,7 +217,7 @@ globalkeys = my_table.join(
     -- dmenu
     awful.key({ modkey, "Shift" }, "Return",
     function ()
-        awful.spawn(string.format("dmenu_run",
+        awful.spawn(string.format("dmenu_run -fn '-14'",
         beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
 	end,
     {description = "show dmenu", group = "hotkeys"}),
@@ -243,8 +243,6 @@ globalkeys = my_table.join(
         {description = "cmus" , group = "terminal apps" }),
     awful.key({ modkey, altkey }, "e", function () awful.util.spawn( "emacsclient -a 'emacs' -c" ) end,
         {description = "emacs client" , group = "gui apps" }),
-    awful.key({ modkey, altkey  }, "f", function () awful.util.spawn( terminal.." -e sh ./.config/vifm/scripts/vifmrun" ) end,
-        {description = "vifm" , group = "terminal apps" }),
     awful.key({ modkey, altkey  }, "i", function () awful.util.spawn( terminal.." -e irssi" ) end,
         {description = "irssi" , group = "terminal apps" }),
     awful.key({ modkey, altkey  }, "j", function () awful.util.spawn( terminal.." -e joplin" ) end,
@@ -846,3 +844,4 @@ awful.spawn.with_shell("acpi")
 awful.spawn.with_shell("kwalletd5")
 awful.spawn.with_shell("wifi-connect.sh")
 awful.spawn.with_shell("ckb-next -d -b")
+awful.spawn.with_shell("autorandr default")
