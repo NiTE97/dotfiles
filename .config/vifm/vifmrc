@@ -407,6 +407,9 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 
 " Sample mappings
 
+" Shortcut to quit vifm
+noremap q :quit<cr>
+
 " Start shell in current directory
 nnoremap s :shell<cr>
 
