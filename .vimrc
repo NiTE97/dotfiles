@@ -21,6 +21,7 @@ Plug 'uiiaoo/java-syntax.vim'
 Plug 'bfrg/vim-cpp-modern'
 Plug 'dense-analysis/ale'
 Plug 'frazrepo/vim-rainbow'
+Plug 'ap/vim-css-color'
 
 call plug#end()
 
