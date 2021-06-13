@@ -255,6 +255,12 @@ globalkeys = my_table.join(
         {description = "refresh zsh" , group = "terminal apps" }),
     awful.key({ modkey, altkey }, "n", function () awful.util.spawn( "nvidia-settings" ) end,
         {description = "nvidia" , group = "gui apps" }),
+    awful.key({ modkey, altkey }, "v", function () awful.util.spawn( terminal.." -e spt") 
+    						   awful.util.spawn( terminal.." -e htop" ) 
+						   awful.util.spawn( terminal.." -e peaclock" )
+						   awful.util.spawn( terminal.." -e vim" )
+					   end,
+        {description = "start dev" , group = "terminal apps" }),
 
 	-- screenshots
     awful.key({ }, "Print", function () awful.util.spawn("scrot 'ArcoLinuxD-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'") end,
