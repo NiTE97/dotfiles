@@ -62,7 +62,7 @@ local themes = {
 }
 
 -- choose your theme here
-local chosen_theme = themes[5]
+local chosen_theme = themes[4]
 local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme)
 beautiful.init(theme_path)
 
@@ -255,13 +255,15 @@ globalkeys = my_table.join(
         {description = "start dev" , group = "terminal apps" }),
     
     -- GUI apps
-    awful.key({ modkey, altkey }, "f", function () awful.util.spawn( "firefox" ) end,
+    awful.key({ modkey, altkey }, "f", function () awful.util.spawn( "firefox --new-window" ) end,
         {description = "firefox" , group = "gui apps" }),
-    awful.key({ modkey, altkey }, "r", function () awful.util.spawn( "firefox reddit.com" ) end,
+    awful.key({ modkey, altkey }, "r", function () awful.util.spawn( "firefox --new-window reddit.com" ) end,
         {description = "reddit" , group = "gui apps" }),
-    awful.key({ modkey, altkey }, "y", function () awful.util.spawn( "firefox youtube.com" ) end,
+    awful.key({ modkey, altkey }, "y", function () awful.util.spawn( "firefox --new-window youtube.com" ) end,
         {description = "youtube" , group = "gui apps" }),
-    awful.key({ modkey, altkey }, "g", function () awful.util.spawn( "firefox duckduckgo.com" ) end,
+    awful.key({ modkey, altkey }, "w", function () awful.util.spawn( "firefox --new-window web.whatsapp.com" ) end,
+        {description = "whatsapp" , group = "gui apps" }),
+    awful.key({ modkey, altkey }, "g", function () awful.util.spawn( "firefox --new-window duckduckgo.com" ) end,
         {description = "duckduckgo" , group = "gui apps" }),
     awful.key({ modkey, altkey }, "d", function () awful.util.spawn( "discord" ) end,
         {description = "discord" , group = "gui apps" }),
@@ -690,6 +692,7 @@ awful.rules.rules = {
     -- Custom Rules
     { rule = { class = "firefox" },
           properties = { screen = 1, tag = " " } },
+-- " ", " ", " ", " "
 
 
 
