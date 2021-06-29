@@ -215,13 +215,13 @@ root.buttons(my_table.join(
 globalkeys = my_table.join(
 
     -- {{{ Personal keybindings
-    -- dmenu
+    -- dmenu / rofi
     awful.key({ modkey, "Shift" }, "Return",
     function ()
-        awful.spawn(string.format("dmenu_run -fn '-14'",
-        beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
+	awful.spawn(string.format("rofi -show combi", 
+	beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
 	end,
-    {description = "show dmenu", group = "hotkeys"}),
+    {description = "show rofi", group = "hotkeys"}),
 
     -- My dmenu scripts (Alt+Ctrl+Key)
     awful.key({ altkey, "Control" }, "e", function () awful.util.spawn( "./.dmenu/dmenu-edit-configs.sh" ) end,
@@ -688,12 +688,6 @@ awful.rules.rules = {
 
     { rule = { instance = "qutebrowser" },
           properties = { screen = 1, tag = " SYS " } },
-
-    -- Custom Rules
-    { rule = { class = "firefox" },
-          properties = { screen = 1, tag = " " } },
--- " ", " ", " ", " "
-
 
 
     -- Floating clients.
