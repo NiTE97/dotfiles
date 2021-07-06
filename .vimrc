@@ -22,14 +22,16 @@ Plug 'bfrg/vim-cpp-modern'
 Plug 'dense-analysis/ale'
 Plug 'frazrepo/vim-rainbow'
 Plug 'ap/vim-css-color'
+Plug 'tribela/vim-transparent'
 
 call plug#end()
 
 colorscheme dracula
 
-hi! MatchParen cterm=NONE,bold gui=NONE,bold guibg=#87c095 guifg=NONE
+hi! MatchParen cterm=NONE,bold gui=NONE,bold guifg=NONE
+hi! Normal guibg=NONE ctermbg=NONE
 
-set relativenumber
+set nu relativenumber
 set mouse=a
 set title
 set cursorline
