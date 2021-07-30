@@ -6,7 +6,6 @@ local gears = require("gears")
 local lain  = require("lain")
 local awful = require("awful")
 local wibox = require("wibox")
-
 local math, string, os = math, string, os
 local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
@@ -21,6 +20,7 @@ theme.fg_urgent                                 = "#b74822"
 theme.bg_normal                                 = "#222222"
 theme.bg_focus                                  = "#1E2320"
 theme.bg_urgent                                 = "#3F3F3F"
+theme.bg_systray 				= "#7b88d3"
 theme.taglist_fg_focus                          = "#7b88d3"
 theme.tasklist_bg_focus                         = "#222222"
 theme.tasklist_fg_focus                         = "#7b88d3"
@@ -237,43 +237,32 @@ function theme.at_screen_connect(s)
     s.mywibox = awful.wibar({ position = "top", screen = s, height = 22, bg = theme.bg_normal, fg = theme.fg_normal })
 
     -- Add widgets to the wibox
-    s.mywibox:setup {
-        layout = wibox.layout.align.horizontal,
-        { -- Left widgets
-            layout = wibox.layout.fixed.horizontal,
-            --spr,
-            s.mytaglist,
-            s.mypromptbox,
-            spr,
-        },
-        s.mytasklist, -- Middle widget
-        { -- Right widgets
-            layout = wibox.layout.fixed.horizontal,
-            wibox.widget.systray(),
-            --[[ using shapes
-            pl(wibox.widget { mpdicon, theme.mpd.widget, layout = wibox.layout.align.horizontal }, "#343434"),
-            pl(task, "#343434"),
-            --pl(wibox.widget { mailicon, mail and mail.widget, layout = wibox.layout.align.horizontal }, "#343434"),
-            pl(wibox.widget { memicon, mem.widget, layout = wibox.layout.align.horizontal }, "#777E76"),
-            pl(wibox.widget { cpuicon, cpu.widget, layout = wibox.layout.align.horizontal }, "#4B696D"),
-            pl(wibox.widget { tempicon, temp.widget, layout = wibox.layout.align.horizontal }, "#4B3B51"),
-            --pl(wibox.widget { fsicon, theme.fs.widget, layout = wibox.layout.align.horizontal }, "#CB755B"),
-            pl(wibox.widget { baticon, bat.widget, layout = wibox.layout.align.horizontal }, "#8DAA9A"),
-            pl(wibox.widget { neticon, net.widget, layout = wibox.layout.align.horizontal }, "#889FA7"),
-            pl(binclock.widget, "#777E76"),
-            --]]
-            -- using separators
-            arrow("alpha", "#497B96"),
-            wibox.container.background(wibox.container.margin(wibox.widget { volicon, theme.volume.widget, layout = wibox.layout.align.horizontal }, 2, 3), "#497B96"),
-            arrow("#497B96", "#889FA7"),
-            wibox.container.background(wibox.container.margin(wibox.widget { nil, neticon, net.widget, layout = wibox.layout.align.horizontal }, 3, 3), "#889FA7"),
-            arrow("#889FA7", "#777E76"),
-            wibox.container.background(wibox.container.margin(clock, 4, 8), "#777E76"),
-            arrow("#777E76", "alpha"),
-            --]]
-            s.mylayoutbox,
-        },
-    }
+     s.mywibox:setup {
+       layout = wibox.layout.align.horizontal,
+      { -- Left widgets
+          layout = wibox.layout.fixed.horizontal,
+          --spr,
+          s.mytaglist,
+          s.mypromptbox,
+          spr,
+      },
+      s.mytasklist, -- Middle widget
+      { -- Right widgets
+          layout = wibox.layout.fixed.horizontal,
+          -- wibox.widget.systray(),
+          arrow("alpha", "#7b88d3"),
+          wibox.container.background(wibox.container.margin(wibox.widget.systray(), 10, 10), "#7b88d3"),
+          arrow("#7b88d3", "#497B96"),
+          wibox.container.background(wibox.container.margin(wibox.widget { volicon, theme.volume.widget, layout = wibox.layout.align.horizontal }, 2, 3), "#497B96"),
+          arrow("#497B96", "#889FA7"),
+          wibox.container.background(wibox.container.margin(wibox.widget { nil, neticon, net.widget, layout = wibox.layout.align.horizontal }, 3, 3), "#889FA7"),
+          arrow("#889FA7", "#777E76"),
+          wibox.container.background(wibox.container.margin(clock, 4, 8), "#777E76"),
+          arrow("#777E76", "alpha"),
+          --]]
+          s.mylayoutbox,
+      },
+  }
 end
 
 return theme

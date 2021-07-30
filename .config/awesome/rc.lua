@@ -107,7 +107,7 @@ awful.layout.layouts = {
     --lain.layout.cascade,
     --lain.layout.cascade.tile,
     --lain.layout.centerwork,
-    --lain.layout.centerwork.horizontal,
+    lain.layout.centerwork.horizontal,
     --lain.layout.termfair,
     --lain.layout.termfair.center,
 }
@@ -254,6 +254,8 @@ globalkeys = my_table.join(
 					   end,
         {description = "start dev" , group = "terminal apps" }),
     
+    
+
     -- GUI apps
     awful.key({ modkey, altkey }, "f", function () awful.util.spawn( "firefox --new-window" ) end,
         {description = "firefox" , group = "gui apps" }),
@@ -273,6 +275,8 @@ globalkeys = my_table.join(
         {description = "spotify" , group = "gui apps" }),
     awful.key({ modkey, altkey }, "n", function () awful.util.spawn( "nvidia-settings" ) end,
         {description = "nvidia" , group = "gui apps" }),
+    awful.key({ modkey, altkey }, "e", function () awful.util.spawn( "nautilus" ) end,
+        {description = "nautilus" , group = "gui apps" }),
 
     -- screenshots
     awful.key({ }, "Print", function () awful.util.spawn( "scrot -u" ) end,
