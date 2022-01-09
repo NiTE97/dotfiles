@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<body>
+<p>Willkommen! {{ now }} </p>
+{% if led_status == 1 %}
+<p> Die LED ist eingeschaltet! </p>
+<form action="/off" method="post">
+<input type="submit" value="Ausschalten!">
+</form>
+{% endif %}
+{% if led_status == 0 %}
+<p> Die LED ist ausgeschaltet! </p>
+<form action="/on" method="post">
+<input type="submit" value="Einschalten!">
+</form>
+{% endif %}
+
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+# Diese viminfo-Datei wurde von Vim 8.1 generiert.
+# Sie können sie verändern, wenn Sie vorsichtig vorgehen!
+
+# Viminfo version
+|1,4
+
+# Wert von 'encoding', als diese Datei geschrieben wurde
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# Befehlszeile Geschichte (neueste bis älteste):
+:q
+|2,0,1637742544,,"q"
+:wq
+|2,0,1635837568,,"wq"
+:PlugInstall
+|2,0,1635837263,,"PlugInstall"
+
+# Suchausdruck Geschichte (neueste bis älteste):
+
+# Ausdruck Geschichte (neueste bis älteste):
+
+# Eingabe-Zeile Geschichte (neueste bis älteste):
+
+# Debug-Zeile Geschichte (neueste bis älteste):
+
+# Register:
+
+# Datei-Markierungen:
+'0  34  0  ~/uebung2/__init__.py
+|4,48,34,0,1637742544,"~/uebung2/__init__.py"
+'1  23  8  ~/test.py
+|4,49,23,8,1635837568,"~/test.py"
+'2  23  7  ~/test.py
+|4,50,23,7,1635837505,"~/test.py"
+'3  29  0  ~/test.py
+|4,51,29,0,1635837448,"~/test.py"
+'4  29  0  ~/test.py
+|4,52,29,0,1635837448,"~/test.py"
+'5  29  0  ~/test.py
+|4,53,29,0,1635837448,"~/test.py"
+'6  29  0  ~/test.py
+|4,54,29,0,1635837448,"~/test.py"
+
+# Jumplist (neueste zuerst):
+-'  34  0  ~/uebung2/__init__.py
+|4,39,34,0,1637742544,"~/uebung2/__init__.py"
+-'  1  0  ~/uebung2/__init__.py
+|4,39,1,0,1637742514,"~/uebung2/__init__.py"
+-'  23  8  ~/test.py
+|4,39,23,8,1635837568,"~/test.py"
+-'  23  8  ~/test.py
+|4,39,23,8,1635837568,"~/test.py"
+-'  1  0  ~/test.py
+|4,39,1,0,1635837549,"~/test.py"
+-'  1  0  ~/test.py
+|4,39,1,0,1635837549,"~/test.py"
+-'  23  7  ~/test.py
+|4,39,23,7,1635837505,"~/test.py"
+-'  23  7  ~/test.py
+|4,39,23,7,1635837505,"~/test.py"
+-'  1  0  ~/test.py
+|4,39,1,0,1635837457,"~/test.py"
+-'  1  0  ~/test.py
+|4,39,1,0,1635837457,"~/test.py"
+-'  29  0  ~/test.py
+|4,39,29,0,1635837448,"~/test.py"
+-'  29  0  ~/test.py
+|4,39,29,0,1635837448,"~/test.py"
+-'  29  0  ~/test.py
+|4,39,29,0,1635837448,"~/test.py"
+-'  29  0  ~/test.py
+|4,39,29,0,1635837448,"~/test.py"
+-'  29  0  ~/test.py
+|4,39,29,0,1635837448,"~/test.py"
+-'  29  0  ~/test.py
+|4,39,29,0,1635837448,"~/test.py"
+-'  1  0  ~/test.py
+|4,39,1,0,1635837422,"~/test.py"
+-'  1  0  ~/test.py
+|4,39,1,0,1635837422,"~/test.py"
+
+# Geschichte der Markierungen innerhalb von Dateien (neueste zuerst):
+
+> ~/uebung2/__init__.py
+	*	1637742541	0
+	"	34	0
+
+> ~/test.py
+	*	1635837568	0
+	"	23	8
+	^	23	9
+	.	23	8
+	+	9	7
+	+	14	7
+	+	23	8
