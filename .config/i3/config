@@ -109,16 +109,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 1:www
-set $ws2 2:dev
+set $ws2 2:www
+set $ws1 1:dev
 set $ws3 3:music
 set $ws4 4:social
 set $ws5 5:media
 set $ws6 6:browsing
-set $ws7 7:kaka
+set $ws7 7:email
 set $ws8 "8: "
 set $ws9 "9: "
-set $ws10 "10: "
+set $ws10 0:games
 
 workspace $ws1 output = $monitor_main
 workspace $ws2 output = $monitor_main
@@ -129,6 +129,7 @@ workspace $ws6 output = $monitor_left
 workspace $ws7 output = $monitor_main
 workspace $ws8 output = $monitor_left
 workspace $ws9 output = $monitor_up
+workspace $ws10 output = $monitor_main
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -152,6 +153,7 @@ bindsym $mod+mod2+KP_6 workspace number $ws8
 bindsym $mod+mod2+KP_7 workspace number $ws3
 bindsym $mod+mod2+KP_8 workspace number $ws5
 bindsym $mod+mod2+KP_9 workspace number $ws9
+bindsym $mod+mod2+KP_0 workspace number $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -225,23 +227,26 @@ set $monitor_up = HDMI-0
 #                         *** Workspace specific settings ***                     #
 ##=================================================##
 # Assign Workspaces:
-assign [class="Alacritty"] $ws2
+assign [class="Alacritty"] $ws1
 assign [class="Pcmanfm"] $ws6
 for_window [class="Spotify"] move to workspace $ws3
 assign [class="discord"] $ws4
-assign [class="unity"] $ws2
-
+assign [class="unity"] $ws1
+assign [class="heroic"] $ws10
+assign [class="thunderbird"] $ws7
 ## Custom Keybindings
-bindsym $mod+mod1+f workspace 1:www; exec "firefox"
+bindsym $mod+mod1+f workspace 2:www; exec "firefox"
 #bindsym $mod+mod1+w exec "firefox --new-window https://web.whatsapp.com"
 bindsym $mod+mod1+r workspace 4:social; exec "firefox --new-window https://reddit.com"
-bindsym $mod+mod1+m workspace 1:www; exec "firefox --new-window https://moodle.htwsaar.de"
+bindsym $mod+mod1+m workspace 2:www; exec "firefox --new-window https://moodle.htwsaar.de"
 bindsym $mod+mod1+e workspace 6:browsing; exec "pcmanfm"
 bindsym $mod+mod1+d workspace 4:social; exec "discord"
 bindsym $mod+mod1+s workspace 3:music; exec "spotify"
 bindsym $mod+mod1+w workspace 4:social; exec "firefox --new-window https://web.whatsapp.com"
 bindsym $mod+mod1+n workspace 5:media; exec "firefox --new-window https://www.netflix.com"
-bindsym $mod+Return workspace 2:dev; exec alacritty
+bindsym $mod+Return workspace 1:dev; exec alacritty
+bindsym $mod+mod1+h workspace 0:games; exec heroic
+bindsym $mod+mod1+t workspace 7:kaka; exec thunderbird
 
 ## Spotify Keybindings
 bindsym XF86AudioNext exec sp next
