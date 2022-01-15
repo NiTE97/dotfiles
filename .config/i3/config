@@ -259,9 +259,5 @@ bindsym XF86AudioStop exec killall spotify
 #bar {
 #        status_command i3status
 #}
-exec picom
-exec ckb-next -b &
-exec nitrogen --restore
+
 exec bash ~/.config/i3/startup.sh
-exec dunst
-exec bash ~/.config/polybar/launch.sh
