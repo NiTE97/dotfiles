@@ -1,6 +1,5 @@
 #!/bin/bash
 
-git clone https://www.github.com/NiTE97/dotfiles
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 cd dotfiles
@@ -10,7 +9,7 @@ mv ~/.vimrc ~/.vimrc_old
 ln .vimrc ~/.vimrc
 ln .ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
 
-ln .config/* ~/.config
+ln -s .config/* ~/.config
 
 cd ~/.vim/plugged/YouCompleteMe
 
