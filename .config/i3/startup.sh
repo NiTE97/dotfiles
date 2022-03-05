@@ -21,3 +21,4 @@ dunst &
 numlockx &
 megasync &
 flameshot &
+udiskie &
