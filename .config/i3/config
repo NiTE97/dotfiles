@@ -17,7 +17,9 @@ set $mod Mod4
 font pango:Iosevka 18
 title_align center
 client.focused          #4c7899 #EC407A #ffffff #2e9ef4   #285577
-
+gaps inner 10
+gaps outer 0
+smart_gaps on
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -177,6 +179,7 @@ bindsym $mod+Shift+mod2+KP_Right move container to workspace number $ws8
 bindsym $mod+Shift+mod2+KP_Home move container to workspace number $ws3
 bindsym $mod+Shift+mod2+KP_Up move container to workspace number $ws5
 bindsym $mod+Shift+mod2+KP_Prior move container to workspace number $ws9
+bindsym $mod+Shift+mod2+KP_Insert move container to workspace number $ws10
 
 
 bindsym $mod+p workspace back_and_forth
@@ -228,25 +231,24 @@ set $monitor_up = HDMI-0
 ##=================================================##
 # Assign Workspaces:
 assign [class="Alacritty"] $ws1
-assign [class="Pcmanfm"] $ws6
 for_window [class="Spotify"] move to workspace $ws3
 assign [class="discord"] $ws4
 assign [class="unity"] $ws1
-assign [class="heroic"] $ws10
+assign [class="lutris"] $ws10
 assign [class="thunderbird"] $ws7
 ## Custom Keybindings
-bindsym $mod+mod1+f workspace 2:www; exec "firefox"
+bindsym $mod+mod1+f workspace 2:www; exec "brave"
 #bindsym $mod+mod1+w exec "firefox --new-window https://web.whatsapp.com"
-bindsym $mod+mod1+r workspace 4:social; exec "firefox --new-window https://reddit.com"
-bindsym $mod+mod1+m workspace 2:www; exec "firefox --new-window https://moodle.htwsaar.de"
+bindsym $mod+mod1+r workspace 4:social; exec "brave --new-window https://reddit.com"
+bindsym $mod+mod1+m workspace 2:www; exec "brave --new-window https://moodle.htwsaar.de"
 bindsym $mod+mod1+e workspace 6:browsing; exec "pcmanfm"
-bindsym $mod+mod1+d workspace 4:social; exec "discord"
+bindsym $mod+mod1+d workspace 4:social; exec "discord-canary"
 bindsym $mod+mod1+s workspace 3:music; exec "spotify"
-bindsym $mod+mod1+w workspace 4:social; exec "firefox --new-window https://web.whatsapp.com"
-bindsym $mod+mod1+n workspace 5:media; exec "firefox --new-window https://www.netflix.com"
+bindsym $mod+mod1+w workspace 4:social; exec "brave --new-window https://web.whatsapp.com"
+bindsym $mod+mod1+n workspace 5:media; exec "electronplayer"
 bindsym $mod+Return workspace 1:dev; exec alacritty
-bindsym $mod+mod1+h workspace 0:games; exec heroic
-bindsym $mod+mod1+t workspace 7:kaka; exec thunderbird
+bindsym $mod+mod1+l workspace 0:games; exec lutris
+bindsym $mod+mod1+t workspace 7:email; exec thunderbird
 
 ## Spotify Keybindings
 bindsym XF86AudioNext exec sp next

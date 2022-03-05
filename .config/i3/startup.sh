@@ -17,6 +17,7 @@ picom &
 ~/.config/polybar/launch.sh &
 nitrogen --restore &
 ckb-next -b &
-heroic &
 dunst &
-
+numlockx &
+megasync &
+flameshot &

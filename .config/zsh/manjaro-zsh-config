@@ -24,7 +24,7 @@ SAVEHIST=10000
 #export EDITOR=/usr/bin/nano
 #export VISUAL=/usr/bin/nano
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
-
+export QT_QPA_PLATFORMTHEME=qt5ct
 
 ## Keybindings section
 bindkey -e
@@ -54,14 +54,14 @@ bindkey -s '^[[19~' 'styli.sh -n -m 3 -s abstract; clear\n'
 #Vifm
 bindkey -s '^[[15~' '~/.config/vifm/scripts/vifmrun \n'
 ## Clearfetch
-#function clearfetch() { echo "clear && neofetch"; clear; neofetch; zle reset-prompt; zle redisplay}
-#zle -N clearfetch
-#bindkey '^n' clearfetch
+function clearfetch() { echo "clear && pfetch"; clear; pfetch; zle reset-prompt; zle redisplay}
+zle -N clearfetch
+bindkey '^n' clearfetch
 
 # ClearFiglet
-function clearfiglet() { echo "clear && figlet NiTE97 | lolcat"; clear; figlet NiTE97 | lolcat --seed=100; zle reset-prompt; zle redisplay }
-zle -N clearfiglet
-bindkey '^n' clearfiglet
+#function clearfiglet() { echo "clear && figlet NiTE97 | lolcat"; clear; figlet NiTE97 | lolcat --seed=100; zle reset-prompt; zle redisplay }
+#zle -N clearfiglet
+#bindkey '^n' clearfiglet
 
 # Navigate words with ctrl+arrow keys
 bindkey '^[Oc' forward-word                                     #
@@ -72,7 +72,7 @@ bindkey '^H' backward-kill-word                                 # delete previou
 bindkey '^[[Z' undo                                             # Shift+tab undo last action
 
 ## Alias section 
-alias cp="cp -i"                                                # Confirm before overwriting something
+#alias cp="cp -i"                                                # Confirm before overwriting something
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
 alias gitu='git add . && git commit && git push'
@@ -83,6 +83,7 @@ alias la='ls -la --color=always'
 alias ls='ls --color=always'
 alias vifm='~/.config/vifm/scripts/vifmrun'
 alias sublime='~/Applications/sublime/sublime_text'
+alias hgrep='history | grep $1'
 # Theming section  
 autoload -U compinit colors zcalc
 compinit -d
