@@ -1,33 +1,17 @@
 #!/bin/bash
 
-git pull;
+git clone https://www.github.com/NiTE97/dotfiles
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-#Nur wenn Plug noch nicht installiert ist!
-#echo 'Downloading plug.vim...'
-#curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-echo 'Alte Dateien verschieben...';
+cd dotfiles
 mv ~/.zshrc ~/.zshrc_old
+ln .zshrc ~/.zshrc
 mv ~/.vimrc ~/.vimrc_old
-sudo mv /usr/share/zsh/manjaro-zsh-config /usr/share/zsh/manjaro-zsh-config_old
-sudo mv /usr/share/zsh/manjaro-zsh-prompt /usr/share/zsh/manjaro-zsh-prompt_old
-sudo mv /usr/share/zsh/p10k.zsh /usr/share/zsh/p10k.zsh_old
+ln .vimrc ~/.vimrc
+ln .ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
 
-echo 'Neue Dateien anlegen...';
-ln -f .zshrc ~/.zshrc
-ln -f .vimrc ~/.vimrc
-ln -f .ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
-ln -f login.sh ~/.config/autostart-scripts/login.sh
-sudo ln -f manjaro-zsh-prompt /usr/share/zsh/manjaro-zsh-prompt
-sudo ln -f manjaro-zsh-config /usr/share/zsh/manjaro-zsh-config
-sudo ln -f p10k.zsh /usr/share/zsh/p10k.zsh
-sudo ln -f styli.sh /usr/bin/styli.sh
+ln .config/* ~/.config
 
-vim -c :PlugInstall
+cd ~/.vim/plugged/YouCompleteMe
 
-# Nur wenn ycm noch nicht installiert ist!
-#cd ~/.vim/plugged/YouCompleteMe
-#python3 install.py --all
-
-
-source ~/.zshrc;
+python3 install.py --all
