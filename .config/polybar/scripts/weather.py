@@ -13,8 +13,8 @@ import requests
 import json
 
 # Settings
-city = "<CITY>" # Your town
-api_key = "<API-KEY>" # Your openweather api key
+city = "Losheim am See" # Your town
+api_key = "63db86967031dedcda2ca548898f6d10" # Your openweather api key
 units = "metric" # Unit system {imperial or metric}
 temperature_unit = "C" # Units of measurement. That will be showed in UI. Does not affect on API.
 
@@ -73,7 +73,7 @@ def main():
                 if(group == "Atmosphere"):
                     return atmophere_icons_list[id] + ' {}°{}'.format(temp, temperature_unit)
 
-                return icons_list[icon] + '%{F${foreground}' + ' {}°{}'.format(temp, temperature_unit) + '%{F-}'
+                return icons_list[icon] + '' + ' {}°{}'.format(temp, temperature_unit) + '%{F-}'
         else:
             return "" # Return reload icon
     except:
